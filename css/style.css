@@ -1,0 +1,263 @@
+html,body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 20px;
+    font-size: 1rem;
+    color:#303137;
+    margin: 0;
+}
+.navbar, .container {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.brand, .nav-link{
+    text-transform: uppercase;
+    color: #303137;
+}
+.brand{
+    font-size: 25px;
+}
+.master{
+    color: rgb(255, 111, 111);
+}
+ul.topnav{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    transition: all 0.3s ease-in-out;
+}
+.topnav .nav-link{
+    text-decoration: none;
+    padding-left: 20px;
+    font-size: 20px;
+}
+.dropdownLink{
+    display: none;
+}
+li.dropdownLink a{
+    text-decoration: none;
+    color:black;
+    font-size: 30px;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+.headershot-wrapper{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 6rem 0;
+}
+.profileImg{
+    border-radius: 50%;
+    max-width: 300px;
+    width: 100%;
+}
+.services, .contact-container{
+    background-color: #F1F3Fa;
+    padding: 4rem 1rem;
+}
+.media-object{
+    display: flex;
+    align-items: center;
+    padding: 4rem 1rem;    
+}
+.icon-left,
+.icon-right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.blurb-wrapper-right,
+.blurb-wrapper-left{
+    flex: 1;
+}
+.icon-left,
+.blurb-wrapper-left{
+    order: 1;
+}
+.icon-right,
+.blurb-wrapper-right{
+    order:2;
+}
+.blurb-header{
+    font-size: 24px;
+    margin-top: 0;
+}
+.blurb-info{
+    color: #303137;
+    font-size: 18px;
+}
+.quote-btn-wrapper{
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+.quote-btn{
+    color: #FFFFFF;
+    background-color: rgb(255, 113, 113);
+    font-size: 18px;
+    border: none;
+    padding: .8rem 4rem;
+    border-radius: 3px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.3);
+}
+.quote-btn:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+}
+.graphIcon{
+    width: 150px;
+}
+
+/* Portofolio */
+
+.section-header{
+    text-align: center;
+    padding: 6rem 0 4rem;
+}
+.portofolio-wrapper{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.portofolio-object{
+    max-width: 250px;
+    margin: 1rem 0;
+}
+.portofolio-box{
+    width: 250px;
+    height: 250px;
+    background-color: #F1F3Fa;
+    transition: all 0.2s ease-in-out;
+}
+.portofolio-box:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+}
+
+/* Contact */
+
+form label{
+    font-size: 14px;
+}
+
+.form-group{
+    margin-bottom: 0.75rem;
+}
+
+.form-control{
+    max-width: 800px;
+    width: 100%;
+    color:#292b2c;
+    border-radius: 3px;
+    border: 1px solid #ced4da;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    background-clip: padding-box;
+    display: block;
+}
+
+.submit-btn-wrapper{
+    margin-top: 3rem;    
+}
+
+
+
+
+/* ----------Mobile--------- */
+
+@media (max-width: 768px) {
+    
+    ul.topnav li a.nav-link {
+        display: none;
+    }
+
+    ul.topnav li.dropdownLink {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        
+    }
+
+    ul.topnav.responsive li.dropdownLink {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+
+    }
+
+    ul.topnav.responsive {
+        flex-direction: column;
+        text-align: right;
+    }
+
+    ul.topnav.responsive li {
+        position: relative;
+        top: 30px;
+        right: 30px;
+    }
+
+    ul.topnav.responsive li a.nav-link {
+        display: block;
+        line-height: 2;
+    }
+
+    ul.topnav li.toggles :hover{
+        background-color: rgb(253, 129, 129);
+        border-radius: 5px;
+        transform: scale(1.02);
+    }
+
+    .portofolio-wrapper{
+        text-align: center;
+    }
+
+    .media-object {
+        display: flex;
+        text-align: center ;
+        flex-direction: column;
+
+    }
+
+    .icon-right,
+    .icon-left{
+        order: 1;
+    }
+
+    .blurb-wrapper-right,
+    .blurb-wrapper-right{
+        order: 2;
+    }
+
+    .blurb-wrapper-left,
+    .blurb-wrapper-right{
+        padding-top: 2rem   ;
+    }
+
+    .form-group{
+        display: flex;
+    }
+
+    .submit-btn-wrapper{
+        text-align: center;
+    }
+}
+
+@media (max-width: 599px){
+    .portofolio-wrapper{
+        justify-content: center;
+    }
+}
